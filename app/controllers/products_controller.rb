@@ -5,4 +5,14 @@ class ProductsController < ApplicationController
     # show the data to to the user
     render json: products.as_json
   end
+
+  def first
+    product = Product.first
+    render json: product.as_json
+  end
+
+  def second
+    product = Product.second
+    render json: product.as_json
+  end
 end
