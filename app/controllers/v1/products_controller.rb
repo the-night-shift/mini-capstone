@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class V1::ProductsController < ApplicationController
   def every_product
     # grab the data from the db
     products = Product.all
