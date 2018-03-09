@@ -15,4 +15,13 @@ class V1::ProductsController < ApplicationController
     product = Product.second
     render json: product.as_json
   end
+
+  def any
+    # get user input
+    user_input = params[:id]
+    # based on the user input, find a product in the db
+    productx = Product.find_by(id: user_input)
+    # show that product to the user
+    render json: productx.as_json
+  end
 end
